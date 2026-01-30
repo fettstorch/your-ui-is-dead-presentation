@@ -51,7 +51,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 # What is Slidev?
 
-<RiveCanvas debug :riveParams="{ src: 'https://cdn.rive.app/animations/vehicles.riv' }" />
+<RiveCanvas debug :riveParams="{ src: '/julian.riv' }" class="w-60" ></RiveCanvas>
 
 <style>
 h1 {
@@ -586,6 +586,29 @@ square: 0,-247,0,0
 
 ---
 
+dragPos:
+square: 0,-279,0,0
+
+---
+
+dragPos:
+square: 0,-629,0,0
+
+---
+
+dragPos:
+square: 0,-629,0,0
+
+---
+
+dragPos:
+square: 0,-320,0,0
+
+---
+dragPos:
+  square: 0,-320,0,0
+---
+
 # Draggable Elements
 
 Double-click on the draggable elements to edit their positions.
@@ -632,6 +655,7 @@ hide: false
 
 ---
 
+
 ---
 
 # Monaco Editor
@@ -658,8 +682,8 @@ console.log(`vue ${version}`);
 console.log(
   emptyArray<number>(10).reduce(
     (fib) => [...fib, fib.at(-1)! + fib.at(-2)!],
-    [1, 1],
-  ),
+    [1, 1]
+  )
 );
 ```
 

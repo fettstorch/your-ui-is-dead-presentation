@@ -21,7 +21,20 @@ const defaultRiveParameters: Partial<RiveParameters> = {
   autoplay: true,
   onLoad: async () => {
     const r = await rive;
+    const canvas = canvasRef.value!;
 
+    // Get artboard aspect ratio
+    const bounds = r.bounds;
+    if (bounds) {
+      const artboardWidth = bounds.maxX - bounds.minX;
+      const artboardHeight = bounds.maxY - bounds.minY;
+      const aspectRatio = artboardWidth / artboardHeight;
+
+      // Set CSS height based on width and aspect ratio
+      canvas.style.height = `${canvas.clientWidth / aspectRatio}px`;
+    }
+
+    // Now resize drawing surface with proper CSS dimensions set
     r.resizeDrawingSurfaceToCanvas();
   },
 };
@@ -38,16 +51,27 @@ until(canvasRef)
         ...defaultRiveParameters,
         ...props.riveParams,
         canvas,
-      }),
+      })
     );
   });
 </script>
 
 <template>
-  <canvas ref="canvasRef" id="canvas" :class="{ debug: props.debug }"></canvas>
+  <canvas
+    width="50000"
+    height="50000"
+    ref="canvasRef"
+    id="canvas"
+    :class="{ debug: props.debug }"
+  ></canvas>
 </template>
 
 <style scoped>
+#canvas {
+  /* Width should be set via style prop; height is calculated from artboard aspect ratio */
+  display: block;
+}
+
 #canvas.debug {
   border: 2px solid green;
 }
