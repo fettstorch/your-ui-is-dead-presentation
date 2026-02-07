@@ -1,0 +1,3 @@
+# Slidev markdown files use --- for slide/frontmatter delimiters
+# which Prettier incorrectly interprets as setext headings
+*.md

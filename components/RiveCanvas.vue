@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { awaitable } from "@fettstorch/jule";
+import { Awaitable, awaitable } from "@fettstorch/jule";
 import { Rive, RiveParameters } from "@rive-app/canvas";
 import { until } from "@vueuse/core";
 import { useTemplateRef } from "vue";
@@ -9,9 +9,14 @@ import { useTemplateRef } from "vue";
  * Its opinionated in trying to maintain an
  */
 
-const props = defineProps<{
+const {
+  debug = false,
+  riveParams,
+  out = undefined,
+} = defineProps<{
   debug?: boolean;
   riveParams: Partial<Exclude<RiveParameters, "canvas">>;
+  out?: Awaitable<Rive>;
 }>();
 
 const canvasRef = useTemplateRef("canvasRef");
@@ -36,6 +41,8 @@ const defaultRiveParameters: Partial<RiveParameters> = {
 
     // Now resize drawing surface with proper CSS dimensions set
     r.resizeDrawingSurfaceToCanvas();
+
+    out?.resolve(r);
   },
 };
 
@@ -49,9 +56,9 @@ until(canvasRef)
     rive.resolve(
       new Rive({
         ...defaultRiveParameters,
-        ...props.riveParams,
+        ...riveParams,
         canvas,
-      })
+      }),
     );
   });
 </script>
@@ -62,7 +69,7 @@ until(canvasRef)
     height="50000"
     ref="canvasRef"
     id="canvas"
-    :class="{ debug: props.debug }"
+    :class="{ debug }"
   ></canvas>
 </template>
 
