@@ -92,7 +92,7 @@
 }
 
 .anim-in-bottom {
-    animation: in-bottom 5000ms ease both;
+    animation: in-bottom 500ms cubic-bezier(.56,2,.83,.67) both;
 }
 
 @keyframes in-bottom {
@@ -121,7 +121,7 @@
 }
 
 .anim-in-top {
-    animation: in-top 500ms cubic-bezier(.56,2,.83,.67) both;
+    animation: in-top 500ms cubic-bezier(.56,2,.83,.67) backwards;
 }
 
 

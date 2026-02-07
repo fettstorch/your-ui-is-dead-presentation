@@ -54,7 +54,10 @@ const currentLabel = computed(() => {
     class="ball absolute left-25 bottom-15 rounded-[50%] w-20 h-20 bg-red"
   />
 
-  <div class="circle absolute left-20 bottom-10 rounded-[50%] w-30 h-30">
+  <div
+    class="circle absolute left-20 bottom-10 rounded-[50%] w-30 h-30 anim-in-bottom"
+    style="animation-delay: 1s"
+  >
     <div
       class="absolute -top-10 left-1/2 -translate-x-1/2 text-green font-bold text-6"
     >
@@ -62,7 +65,10 @@ const currentLabel = computed(() => {
     </div>
   </div>
 
-  <div class="circle absolute right-20 bottom-10 rounded-[50%] w-30 h-30">
+  <div
+    class="circle absolute right-20 bottom-10 rounded-[50%] w-30 h-30 anim-in-bottom"
+    style="animation-delay: 1.4s"
+  >
     <div
       class="absolute -top-10 left-1/2 -translate-x-1/2 text-green font-bold text-6"
     >
@@ -74,7 +80,7 @@ const currentLabel = computed(() => {
   <template v-if="clicks >= 5">
     <div
       v-if="currentPath"
-      class="graph-container absolute bottom-8 left-[25vw] right-[25vw] h-1/2"
+      class="graph-container absolute bottom-8 left-50 right-50 h-1/2"
     >
       <TimingFunction
         class="opacity-40"
@@ -97,8 +103,8 @@ const currentLabel = computed(() => {
       </div>
     </div>
 
-    <div class="text-primary absolute left-[20vw] bottom-5">0/0</div>
-    <div class="text-primary absolute right-[20vw] bottom-74">1/1</div>
+    <div class="text-primary absolute left-40 bottom-5">0/0</div>
+    <div class="text-primary absolute right-40 bottom-74">1/1</div>
   </template>
 </template>
 
@@ -119,7 +125,7 @@ const currentLabel = computed(() => {
 
 @keyframes move-it {
   to {
-    left: 82%;
+    transform: translateX(880%);
   }
 }
 
