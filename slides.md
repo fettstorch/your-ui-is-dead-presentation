@@ -80,8 +80,32 @@ src: ./pages/jello-demo.md
 
 ---
 layout: center
-clicks: 8
+clicks: 10
 src: ./pages/timing-functions.md
+---
+
+---
+layout: center
+src: ./pages/js-animations.md
+clicks: 5
+---
+
+---
+layout: center
+src: ./pages/js-animations-2.md
+clicks: 4
+---
+
+---
+layout: center
+src: ./pages/capabilities-resolved.md
+clicks: 5
+---
+
+---
+layout: center
+src: ./pages/performance-overview.md
+clicks: 3
 ---
 
 ---

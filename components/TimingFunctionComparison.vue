@@ -22,6 +22,8 @@ const currentPath = computed(() => {
     case 7:
       return paths.easeOut;
     case 8:
+    case 9:
+    case 10:
       return paths.cubicBezier;
     default:
       return null;
@@ -41,6 +43,8 @@ const currentLabel = computed(() => {
       return "ease-out";
     case 4:
     case 8:
+    case 9:
+    case 10:
       return "cubic-bezier(0.68, -0.55, 0.27, 1.55)";
     default:
       return undefined;
@@ -50,11 +54,12 @@ const currentLabel = computed(() => {
 
 <template>
   <div
-    v-if="currentLabel"
+    v-if="currentLabel && clicks <= 8"
     class="ball absolute left-25 bottom-15 rounded-[50%] w-20 h-20 bg-red"
   />
 
   <div
+    v-if="clicks <= 8"
     class="circle absolute left-20 bottom-10 rounded-[50%] w-30 h-30 anim-in-bottom"
     style="animation-delay: 1s"
   >
@@ -66,6 +71,7 @@ const currentLabel = computed(() => {
   </div>
 
   <div
+    v-if="clicks <= 8"
     class="circle absolute right-20 bottom-10 rounded-[50%] w-30 h-30 anim-in-bottom"
     style="animation-delay: 1.4s"
   >
@@ -74,6 +80,10 @@ const currentLabel = computed(() => {
     >
       End
     </div>
+  </div>
+
+  <div v-if="clicks >= 9" class="absolute left-20 top-50 anim-in-bottom">
+    <div class="w-60 h-60 gradient-anim rounded-xl" />
   </div>
 
   <!-- Timing function graph -->
@@ -121,6 +131,21 @@ const currentLabel = computed(() => {
 .ball {
   animation: move-it 1s infinite alternate;
   animation-timing-function: v-bind(currentLabel);
+}
+
+.gradient-anim {
+  animation: gradient-anim 1s infinite alternate;
+  animation-timing-function: v-bind(currentLabel);
+  background: blue;
+}
+
+@keyframes gradient-anim {
+  from {
+    filter: none;
+  }
+  to {
+    filter: hue-rotate(180deg);
+  }
 }
 
 @keyframes move-it {
