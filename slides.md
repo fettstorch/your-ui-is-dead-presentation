@@ -106,6 +106,13 @@ clicks: 5
 layout: center
 src: ./pages/performance-overview.md
 clicks: 3
+transition: none
+---
+
+---
+layout: center
+src: ./pages/performance-pipeline.md
+clicks: 15
 ---
 
 ---

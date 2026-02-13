@@ -30,7 +30,7 @@
 }
 ```
 
-```css
+```css {*|2}
 .anim {
     animation: jello 0.8s infinite ease-out;
 }

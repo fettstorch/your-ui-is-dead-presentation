@@ -92,7 +92,7 @@
 }
 
 .anim-in-bottom {
-    animation: in-bottom 500ms cubic-bezier(.56,2,.83,.67) both;
+    animation: in-bottom 500ms cubic-bezier(.56,2,.83,.67);
 }
 
 @keyframes in-bottom {
@@ -130,7 +130,7 @@
 }
 
 .anim-in-fade {
-    animation: fade 750ms ease forwards;
+    animation: fade 750ms ease both;
 }
 
 @keyframes fade {
