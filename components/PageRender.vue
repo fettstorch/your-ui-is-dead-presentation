@@ -147,7 +147,9 @@ const handleClickNavbar = useThrottleFn(() => {
   layoutInvocation.value += 1;
 });
 
-const handleMouseUpBody = () => {
+const handleMouseUpBody = (event) => {
+  if (clicks < 14) return;
+  handleMouseDownBody(event);
   isBodyActive.value = false;
 };
 

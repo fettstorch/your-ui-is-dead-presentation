@@ -31,6 +31,8 @@
   <img class="jello-img" src="./jello.png" style="top: 82%; left: 87%;" />
 </div>
 
+<img src="https://media0.giphy.com/media/mCClSS6xbi8us/200.gif?cid=5a38a5a2rrdc4puu0xlxgdoqe115gpux5l7syib2apwri5b8" class="absolute bottom-5 right-5 rounded-xl" v-click />
+
 <style>
 .jello-container {
   position: absolute;

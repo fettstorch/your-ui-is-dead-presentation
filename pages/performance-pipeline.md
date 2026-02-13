@@ -46,10 +46,30 @@
 <img v-if="$clicks === 12" class="anim-in-fade w-40 -translate-x-10 -translate-y-20" style="animation-delay: 3s" src="/patrick-letter-nothing.jpg" />
 
 <!-- Examples / Lessons -->
-<div v-if="$clicks >= 15" class="absolute top-35 left-160 text-3 max-w-70">
+<div v-if="$clicks >= 15" class="absolute top-35 left-170 text-3 max-w-70">
     <div class="anim-in-top ex-block">1. Composite only 😌 <br> <Typewriter immediate :delay="1000" class="font-normal">transform (translate, rotate, scale, skew), opacity</Typewriter></div>
     <div class="anim-in-top ex-block">2. Paint & Composite 🙂<br> <Typewriter immediate :delay="4000" class="font-normal">color, background, border-color, border-radius, outline, visibility, ...</Typewriter></div>
     <div class="anim-in-top ex-block">3. Layout & Paint & Composite 🙁<br> <Typewriter immediate :delay="7000" class="font-normal">width, height, top, right, bottom, left, position, display, flex-*, grid-*, align-*, justify-*, min-*, max-*, padding, margin, border-width, z-index, ...</Typewriter></div>
+</div>
+
+<div v-if="$clicks >= 15" class="anim-in-fade absolute flex flex-row top-3 right-37 w-60 pointer-events-none">
+    <img class="relative w-14" src="https://media0.giphy.com/media/WSxuismGwJHM8CAvBW/giphy.gif?cid=5a38a5a2so7n3ok6y3mktqi2yf4qv6jrkfofhbqmlgq8q6ug" />
+    <span class="ml-2 text-2 italic translate-y-6">hover to colorize <br> click to increase height</span>
+</div>
+
+<div v-if="$clicks >= 15" class="anim-in-fade absolute flex flex-row top-30 right-57 w-60 pointer-events-none">
+    <img class="relative w-14" src="https://media0.giphy.com/media/WSxuismGwJHM8CAvBW/giphy.gif?cid=5a38a5a2so7n3ok6y3mktqi2yf4qv6jrkfofhbqmlgq8q6ug" />
+    <span class="ml-2 text-2 italic translate-y-6">click to <br> increase padding</span>
+</div>
+
+<div v-if="$clicks >= 15" class="anim-in-fade absolute flex flex-row top-16 left-15 w-60 pointer-events-none">
+    <span class="ml-2 text-2 italic translate-y-6">hover to scale</span>
+    <img class="relative -scale-x-[100%] w-14" src="https://media0.giphy.com/media/WSxuismGwJHM8CAvBW/giphy.gif?cid=5a38a5a2so7n3ok6y3mktqi2yf4qv6jrkfofhbqmlgq8q6ug" />
+</div>
+
+<div v-if="$clicks >= 15" class="anim-in-fade absolute flex flex-col top-26 left-11 w-60 pointer-events-none">
+    <span class="ml-2 text-2 italic translate-y-6">hover boxes to <br> increase their x-margins</span>
+    <img class="relative translate-y-6 rotate-[90deg] -scale-x-[100%] w-11" src="https://media0.giphy.com/media/WSxuismGwJHM8CAvBW/giphy.gif?cid=5a38a5a2so7n3ok6y3mktqi2yf4qv6jrkfofhbqmlgq8q6ug" />
 </div>
 
 
