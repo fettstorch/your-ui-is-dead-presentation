@@ -56,6 +56,7 @@ const activeFillColor = computed(
     :height="height"
     :viewBox="`0 0 ${width} ${height}`"
     class="pipeline-step"
+    :class="{ 'scale-120': isActive }"
   >
     <defs>
       <clipPath :id="clipId">

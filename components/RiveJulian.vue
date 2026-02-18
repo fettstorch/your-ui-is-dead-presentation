@@ -11,6 +11,7 @@ const { model = "Julian" } = defineProps<{
 const rive = awaitable<Rive>();
 
 // Optional v-model bindings - work as internal state if no v-model provided
+const thumbsup = defineModel<boolean>("thumbsUp", { default: false });
 const sunglasses = defineModel<boolean>("sunglasses", { default: false });
 const flexing = defineModel<boolean>("flexing", { default: false });
 const confident = defineModel<boolean>("confident", { default: false });
@@ -26,6 +27,27 @@ const nersch = defineModel<boolean>("nersch", { default: false });
 const walking = defineModel<boolean>("walking", { default: false });
 const waving = defineModel<boolean>("waving", { default: false });
 const jump = defineModel<boolean>("jump", { default: false });
+const vibing = defineModel<boolean>("vibing", { default: false });
+
+watch(
+  vibing,
+  async (value) => {
+    const r = await rive;
+    const vibingInput = getInput(r, "vibing");
+    if (vibingInput) vibingInput.value = value;
+  },
+  { immediate: true },
+);
+
+watch(
+  thumbsup,
+  async (value) => {
+    const r = await rive;
+    const thumbsupInput = getInput(r, "thumbsUp");
+    if (thumbsupInput) thumbsupInput.value = value;
+  },
+  { immediate: true },
+);
 
 watch(
   sunglasses,

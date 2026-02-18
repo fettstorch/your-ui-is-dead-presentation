@@ -116,6 +116,23 @@ clicks: 15
 ---
 
 ---
+layout: center
+src: ./pages/performance-tools.md
+---
+
+---
+layout: center
+src: ./pages/performance-naive-contract.md
+clicks: 9
+---
+
+---
+layout: center
+src: ./pages/performance-tools.md
+clicks: 10
+---
+
+---
 transition: slide-up
 level: 2
 ---

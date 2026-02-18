@@ -1,5 +1,5 @@
 <div class="absolute left-30 top-1/2 transition-all duration-1000" :class="{
-    ' -translate-y-57 -translate-x-3': $clicks < 2,
+    '-translate-y-57 -translate-x-3': $clicks < 2,
     ' -translate-y-100 -translate-x-3': $clicks >= 2
 }">
     <h1>3. This would hurt performance!</h1>
@@ -50,6 +50,7 @@
     <div class="anim-in-top ex-block">1. Composite only 😌 <br> <Typewriter immediate :delay="1000" class="font-normal">transform (translate, rotate, scale, skew), opacity</Typewriter></div>
     <div class="anim-in-top ex-block">2. Paint & Composite 🙂<br> <Typewriter immediate :delay="4000" class="font-normal">color, background, border-color, border-radius, outline, visibility, ...</Typewriter></div>
     <div class="anim-in-top ex-block">3. Layout & Paint & Composite 🙁<br> <Typewriter immediate :delay="7000" class="font-normal">width, height, top, right, bottom, left, position, display, flex-*, grid-*, align-*, justify-*, min-*, max-*, padding, margin, border-width, z-index, ...</Typewriter></div>
+    <div class="anim-in-top ex-block">4. Restyle & Reflow & Repaint & Composite 😭<br> <Typewriter immediate :delay="9000" class="font-normal">Creating/deleting styles or elements.</Typewriter></div>
 </div>
 
 <div v-if="$clicks >= 15" class="anim-in-fade absolute flex flex-row top-3 right-37 w-60 pointer-events-none">
@@ -85,6 +86,9 @@
     }
     .ex-block:nth-child(3) {
         animation-delay: 5000ms;
+    }
+    .ex-block:nth-child(4) {
+        animation-delay: 9000ms;
     }
     .ex-block .font-normal, .ex-text {
         display: inline-block;
