@@ -4,11 +4,16 @@ import { Rive, StateMachineInput } from "@rive-app/canvas";
 import { awaitable } from "@fettstorch/jule";
 import { watch } from "vue";
 
-const { model = "Julian" } = defineProps<{
-  model?: "Julian" | "Sven";
+const { model = "Julian", onClick } = defineProps<{
+  model: "Julian" | "Sven";
+  onClick?: () => void;
 }>();
 
 const rive = awaitable<Rive>();
+
+const defaultOnClick = () => {
+  jump.value = !jump.value;
+};
 
 // Optional v-model bindings - work as internal state if no v-model provided
 const thumbsup = defineModel<boolean>("thumbsUp", { default: false });
@@ -209,6 +214,7 @@ function getInput(r: Rive, name: string): StateMachineInput | undefined {
 
 <template>
   <RiveCanvas
+    @click="(onClick ?? defaultOnClick)()"
     :riveParams="{
       src: '/julian.riv',
       stateMachines: 'sm1',

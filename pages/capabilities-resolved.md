@@ -20,7 +20,7 @@
 </OnEnter>
 
 <OnEnter v-if="$clicks > 2" class="-scale-x-120 -rotate-30" >
-    <RiveJulian class="w-170 absolute right-50 -bottom-245 anim-in-bottom" :amazed="$clicks < 4" :confident="$clicks >= 4" :sunglasses="$clicks >= 4" />
+    <RiveJulian class="w-170 absolute right-50 -bottom-245 anim-in-bottom" :amazed="$clicks < 4" :confident="$clicks >= 4" :sunglasses="$clicks >= 4" model="Sven"/>
     <img src="https://media4.giphy.com/media/vukiBMS1mJ3MuVrFbU/giphy.gif?cid=5a38a5a2tsdpd8oj7hhabns0btrgbi7sfl44an1onjdwrtbf" class="absolute w-40 anim-in-fade transition-opacity duration-1000" :class="{ 'opacity-0': $clicks >= 4 }" />
 </OnEnter>
 

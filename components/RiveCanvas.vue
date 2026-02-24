@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Awaitable, awaitable } from "@fettstorch/jule";
 import { Rive, RiveParameters } from "@rive-app/canvas";
-import { until } from "@vueuse/core";
+import { until, useDebounceFn } from "@vueuse/core";
 import { useTemplateRef } from "vue";
 
 /**
@@ -21,6 +21,17 @@ const {
 
 const canvasRef = useTemplateRef("canvasRef");
 const rive = awaitable<Rive>();
+let aspectRatio: number | null = null;
+
+function updateCanvasHeight(canvas: HTMLCanvasElement) {
+  if (aspectRatio) {
+    canvas.style.height = `${canvas.clientWidth / aspectRatio}px`;
+  }
+}
+
+function resizeDrawingSurface(r: Rive) {
+  r.resizeDrawingSurfaceToCanvas();
+}
 
 const defaultRiveParameters: Partial<RiveParameters> = {
   autoplay: true,
@@ -33,14 +44,23 @@ const defaultRiveParameters: Partial<RiveParameters> = {
     if (bounds) {
       const artboardWidth = bounds.maxX - bounds.minX;
       const artboardHeight = bounds.maxY - bounds.minY;
-      const aspectRatio = artboardWidth / artboardHeight;
-
-      // Set CSS height based on width and aspect ratio
-      canvas.style.height = `${canvas.clientWidth / aspectRatio}px`;
+      aspectRatio = artboardWidth / artboardHeight;
     }
 
-    // Now resize drawing surface with proper CSS dimensions set
-    r.resizeDrawingSurfaceToCanvas();
+    updateCanvasHeight(canvas);
+    resizeDrawingSurface(r);
+
+    // Debounce the expensive drawing surface resize
+    const debouncedResizeDrawingSurface = useDebounceFn(() => {
+      resizeDrawingSurface(r);
+    }, 150);
+
+    // Watch for width changes and recalculate height
+    const resizeObserver = new ResizeObserver(() => {
+      updateCanvasHeight(canvas);
+      debouncedResizeDrawingSurface();
+    });
+    resizeObserver.observe(canvas);
 
     out?.resolve(r);
   },

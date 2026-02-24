@@ -8,10 +8,12 @@ const {
   speed = 30,
   delay = 0,
   immediate = false,
+  keepCaret = false,
 } = defineProps<{
   speed?: number;
   delay?: number;
   immediate?: boolean;
+  keepCaret?: boolean;
 }>();
 
 const displayedText = ref("");
@@ -61,6 +63,9 @@ const startTyping = () => {
         isTyping.value = false;
         currentTimeout = null;
       }
+      if (index === text.length) {
+        stopTyping();
+      }
     };
 
     typeNextChar();
@@ -94,7 +99,7 @@ onSlideLeave(() => {
       {{ displayedText }}
       <!-- CARET -->
       <span
-        v-if="isActive || isTyping"
+        v-if="isTyping || (isActive && keepCaret)"
         class="typewriter-cursor"
         :class="{ typing: isTyping }"
       />

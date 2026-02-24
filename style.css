@@ -17,6 +17,12 @@
     display: block;
 }
 
+.speach-bubble.right::after {
+    left: auto;
+    right: 0.4em;
+    transform: scaleX(-1);
+}
+
 .label {
     padding: 0.5em;
     background: #040018;
@@ -92,7 +98,7 @@
 }
 
 .anim-in-bottom {
-    animation: in-bottom 500ms cubic-bezier(.56,2,.83,.67);
+    animation: in-bottom 500ms cubic-bezier(.56,2,.83,.67) both;
 }
 
 @keyframes in-bottom {
