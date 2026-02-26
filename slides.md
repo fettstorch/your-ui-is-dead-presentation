@@ -165,7 +165,7 @@ clicks: 1
 ---
 layout: center
 src: ./pages/rive-performance.md
-clicks: 8
+clicks: 6
 ---
 
 ---
@@ -187,5 +187,6 @@ clicks: 7
 
 ---
 layout: center
-src: ./pages/rive-enough-on-my-plate.md
+src: ./pages/rive-resolution.md
+clicks: 3
 ---
