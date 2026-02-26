@@ -1,5 +1,5 @@
 <template>
-  <div class="bluesky-container">
+  <div class="bluesky-container" @click.stop>
     <bsky-widget :handle="handle" :theme="theme"> </bsky-widget>
   </div>
 </template>
@@ -48,6 +48,7 @@ onMounted(async () => {
           }
         }
       });
+
     }
   }, 1500);
 });
@@ -58,6 +59,7 @@ onMounted(async () => {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 :deep(bsky-widget) {
