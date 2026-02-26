@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import RiveCanvas from "./RiveCanvas.vue";
 import { Rive, StateMachineInput } from "@rive-app/canvas";
-import { awaitable } from "@fettstorch/jule";
+import { Awaitable, awaitable } from "@fettstorch/jule";
 import { watch } from "vue";
 
-const { model = "Julian", onClick } = defineProps<{
-  model: "Julian" | "Sven";
+const { model = "Julian", onClick, out = undefined } = defineProps<{
+  model?: "Julian" | "Sven";
   onClick?: () => void;
+  out?: Awaitable<Rive>;
 }>();
 
 const rive = awaitable<Rive>();
+rive.then((r) => out?.resolve(r));
 
 const defaultOnClick = () => {
   jump.value = !jump.value;
@@ -32,6 +34,7 @@ const nersch = defineModel<boolean>("nersch", { default: false });
 const walking = defineModel<boolean>("walking", { default: false });
 const waving = defineModel<boolean>("waving", { default: false });
 const jump = defineModel<boolean>("jump", { default: false });
+const karateChop = defineModel<boolean>("karateChop", { default: false });
 const vibing = defineModel<boolean>("vibing", { default: false });
 
 watch(
@@ -199,6 +202,12 @@ watch(jump, async () => {
   const jumpInput = getInput(r, "jump");
   if (jumpInput) jumpInput.fire();
 });
+
+watch(karateChop, async () => {
+  const r = await rive;
+  const karateChopInput = getInput(r, "karateChop");
+  if (karateChopInput) karateChopInput.fire();
+})
 
 defineExpose({
   nersch,

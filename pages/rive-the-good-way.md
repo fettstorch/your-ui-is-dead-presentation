@@ -1,4 +1,4 @@
-<h1 class="relative opacity-50 blur-10"> 4. I have enough on my plate right now!  </h1>
+<h1 class="relative opacity-50 blur-10"> 3. I have enough on my plate right now!  </h1>
 
 <!-- communication bubbles -->
 <div class="flex flex-col justify-end items-center w-80% h-fit absolute bottom-70 left-1/2 -translate-x-1/2 gap-5">

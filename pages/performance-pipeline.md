@@ -2,7 +2,7 @@
     '-translate-y-57 -translate-x-3': $clicks < 2,
     ' -translate-y-100 -translate-x-3': $clicks >= 2
 }">
-    <h1>3. This would hurt performance!</h1>
+    <h1>4. This would hurt performance!</h1>
     <Typewriter immediate class="absolute -bottom-8" style="color: darkgray">Pipeline</Typewriter>
 </div>
 

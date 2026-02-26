@@ -5,7 +5,7 @@
     </OnEnter>
 </div>
 
-<h1 v-if="$clicks >= 2" class="anim-in-fade transition-all duration-1000"><Typewriter immediate :delay="1000">3. This would hurt performance!</Typewriter></h1>
+<h1 v-if="$clicks >= 2" class="anim-in-fade transition-all duration-1000"><Typewriter immediate :delay="1000">4. This would hurt performance!</Typewriter></h1>
 
 <div class=" right-30 absolute bottom-10 transition-all duration-1000" :class="{
     'translate-x-40 translate-y-20': $clicks >= 4,

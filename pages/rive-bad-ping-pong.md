@@ -1,5 +1,5 @@
 <h1 class="relative">
-    <Typewriter immediate :delay="1000" class="transition-all duration-1000" :class="{'opacity-50 blur-10': $clicks >= 1}" >4. I have enough on my plate right now!</Typewriter>
+    <Typewriter immediate :delay="1000" class="transition-all duration-1000" :class="{'opacity-50 blur-10': $clicks >= 1}" >3. I have enough on my plate right now!</Typewriter>
 </h1>
 
 <!-- communication bubbles -->

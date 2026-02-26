@@ -50,7 +50,7 @@ src: ./pages/we-dont-need-this.md
 
 ---
 src: ./pages/capabilities-overview.md
-clicks: 6
+clicks: 5
 ---
 
 ---
@@ -130,6 +130,7 @@ clicks: 9
 layout: center
 src: ./pages/performance-tools.md
 clicks: 4
+transition: slide-up
 ---
 
 ---
@@ -145,7 +146,8 @@ clicks: 2
 
 ---
 src: ./pages/capabilities-overview.md
-clicks: 4
+clicks: 6
+transition: slide-up
 ---
 
 ---
@@ -158,6 +160,12 @@ clicks: 5
 layout: center
 src: ./pages/rive-capabilities.md
 clicks: 1
+---
+
+---
+layout: center
+src: ./pages/rive-performance.md
+clicks: 8
 ---
 
 ---
@@ -175,12 +183,6 @@ clicks: 4
 ---
 src: ./pages/rive-mouse-follow.md
 clicks: 7
----
-
----
-layout: center
-src: ./pages/rive-performance.md
-clicks: 3
 ---
 
 ---
