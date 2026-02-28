@@ -46,7 +46,7 @@ rive.then((r) => {
 
 <template>
   <OnEnter>
-    <RiveJulian v-if="clicks >= 5" class="w-50 absolute left-20 bottom-5 anim-in-left" :walking="clicks >= 6" v-model:karate-chop="karateChop" :on-click="onClick" :confident :out="rive" />
+    <RiveJulian v-if="clicks >= 5" class="w-50 absolute left-20 bottom-5 anim-in-left cursor-pointer" :walking="clicks >= 6" v-model:karate-chop="karateChop" :on-click="onClick" :confident :out="rive" />
   </OnEnter>
 
   <RiveInterface
