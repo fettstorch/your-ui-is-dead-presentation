@@ -175,7 +175,7 @@ defineExpose({ addBox, removeBox, removeFirstBox, removeRandomBox, boxes });
       :class="{
         'scale-60 -translate-x-40 translate-y-20': clicks === 12,
       }"
-      style="transform-style: preserve-3d"
+      style="transform-style: preserve-3d; perspective: 1000px"
     >
       <div
         class="page-render w-full h-full rounded-xl overflow-hidden bg-gradient-to-r from-red-500 to-orange-500 flex flex-col justify-start items-center transition-all duration-1000"
@@ -439,10 +439,6 @@ defineExpose({ addBox, removeBox, removeFirstBox, removeRandomBox, boxes });
 }
 
 /** 3D layerization effects */
-
-.page-render-wrapper {
-  perspective: 1000px;
-}
 
 .page-render.layerize {
   transform-style: preserve-3d;

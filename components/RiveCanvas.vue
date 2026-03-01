@@ -35,6 +35,7 @@ function resizeDrawingSurface(r: Rive) {
 
 const defaultRiveParameters: Partial<RiveParameters> = {
   autoplay: true,
+  onLoadError: () => {},
   onLoad: async () => {
     const r = await rive;
     const canvas = canvasRef.value!;

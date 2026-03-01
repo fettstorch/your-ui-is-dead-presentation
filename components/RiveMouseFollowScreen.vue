@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { awaitable, sleep } from "@fettstorch/jule";
 import { EventType, Rive } from "@rive-app/canvas";
-import { autoResetRef, refAutoReset } from "@vueuse/core";
+import { refAutoReset } from "@vueuse/core";
 import { ref } from "vue";
 
 const { clicks } = defineProps<{
