@@ -7,7 +7,7 @@ themeConfig:
 # like them? see https://unsplash.com/collections/94734566/slidev
 # background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Your UI is dead
+title: Your UI Is Dead
 # apply UnoCSS classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
@@ -29,9 +29,14 @@ fonts:
 clicks: 1
 ---
 
-<h1><Typewriter immediate class="text-primary">Your UI is dead</Typewriter></h1>
+<script setup>
+import { useI18n } from './composables/useI18n'
+const { t } = useI18n()
+</script>
 
-<Typewriter immediate :delay="2000">From devs for devs</Typewriter>
+<h1><Typewriter immediate class="text-primary">{{ t('title.heading') }}</Typewriter></h1>
+
+<Typewriter immediate :delay="2000">{{ t('title.subtitle') }}</Typewriter>
 
 <JulianSplashScreen class="transition-opacity w-70 absolute left-20 -bottom-30" waving :class="{
   'opacity-0': $clicks < 1,

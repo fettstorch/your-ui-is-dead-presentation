@@ -1,19 +1,23 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
 <h1 class="relative">
-    <Typewriter immediate :delay="1000" class="transition-all duration-1000" :class="{'opacity-50 blur-10': $clicks >= 1}" >3. I have enough on my plate right now!</Typewriter>
+    <Typewriter immediate :delay="1000" class="transition-all duration-1000" :class="{'opacity-50 blur-10': $clicks >= 1}" >{{ t('rive.bpp.h1') }}</Typewriter>
 </h1>
 
 <!-- communication bubbles -->
 <div class="flex flex-col justify-end items-center w-80% h-fit absolute bottom-70 left-1/2 -translate-x-1/2 gap-5">
-    <div v-if="$clicks >= 3" class="speach-bubble right anim-in-bottom">I made this thing in Figma</div>
-    <div v-if="$clicks >= 4" class="speach-bubble anim-in-bottom">OK. I'll do it</div>
-    <div v-if="$clicks >= 5" class="speach-bubble right anim-in-bottom">This should be animated. I made a preview with aftereffects here ^^</div>
-    <div v-if="$clicks >= 6" class="speach-bubble anim-in-bottom">OK. I'll do it</div>
-    <div v-if="$clicks >= 7" class="speach-bubble anim-in-bottom">Here is what i did. Its not <b>exactly</b><br>
-    what you had in mind but its pretty close
+    <div v-if="$clicks >= 3" class="speach-bubble right anim-in-bottom">{{ t('rive.bpp.msg1') }}</div>
+    <div v-if="$clicks >= 4" class="speach-bubble anim-in-bottom">{{ t('rive.bpp.msg2') }}</div>
+    <div v-if="$clicks >= 5" class="speach-bubble right anim-in-bottom">{{ t('rive.bpp.msg3') }}</div>
+    <div v-if="$clicks >= 6" class="speach-bubble anim-in-bottom">{{ t('rive.bpp.msg2') }}</div>
+    <div v-if="$clicks >= 7" class="speach-bubble anim-in-bottom"><span v-html="t('rive.bpp.msg4')" />
     </div>
-    <div v-if="$clicks >= 8" class="speach-bubble right anim-in-bottom">Its OK... i guess...<br><span v-if="$clicks >= 9" class="anim-in-fade">But can we at least improve on this part again?</span></div>
-    <div v-if="$clicks >= 10" class="speach-bubble anim-in-bottom">Wait, I'm on another task right now...</div>
-    <div v-if="$clicks >= 11" class="speach-bubble anim-in-bottom">OK lets see... <span v-if="$clicks >= 12" class="anim-in-fade">Ugh.. ok.. but lets just have a meeting where we adjust everything together to save time</span></div>
+    <div v-if="$clicks >= 8" class="speach-bubble right anim-in-bottom">{{ t('rive.bpp.msg5a') }}<br><span v-if="$clicks >= 9" class="anim-in-fade">{{ t('rive.bpp.msg5b') }}</span></div>
+    <div v-if="$clicks >= 10" class="speach-bubble anim-in-bottom">{{ t('rive.bpp.msg6') }}</div>
+    <div v-if="$clicks >= 11" class="speach-bubble anim-in-bottom">{{ t('rive.bpp.msg7a') }} <span v-if="$clicks >= 12" class="anim-in-fade">{{ t('rive.bpp.msg7b') }}</span></div>
 </div>
 
 
@@ -28,7 +32,7 @@
         '-translate-y-100 -rotate-z-30 -translate-x-40': $clicks === 1,
         '-translate-y-165 rotate-z-0 w-60! -translate-x-90': $clicks > 1,
         }" />
-    <div v-if="$clicks === 1" class="speach-bubble absolute right-40 bottom-80 right anim-in-top">Is what you'd say if anyone had asked you to do it - luckily I'm doing it already</div>
+    <div v-if="$clicks === 1" class="speach-bubble absolute right-40 bottom-80 right anim-in-top">{{ t('rive.bpp.sven') }}</div>
     <!-- Julian -->
     <RiveJulian class="w-120 scale-x-[130%] absolute -bottom-170 -left-80 transition-all duration-500"
     :thumbs-up="$clicks < 2" :sitting="$clicks >= 1" :happy="$clicks < 2" :angry="$clicks >= 12" :angry-waving="$clicks >= 13"

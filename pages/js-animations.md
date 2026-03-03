@@ -1,13 +1,18 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
 <h1 class="-translate-y-50">
-  2. I Don't Have The Capabilities!
-<h3 style="color: darkgray"><Typewriter immediate :delay="1000">JS-animations</Typewriter></h3>
+  {{ t('reasons.long2') }}
+<h3 style="color: darkgray"><Typewriter immediate :delay="1000">JS-Animations</Typewriter></h3>
 </h1>
 
 <div class="absolute left-10 top-40">
     <Typewriter immediate :delay="1300" class="transition-all duration-1000" :class="{'opacity-50': $clicks >= 1 }">- RequestAnimationFrame</Typewriter> <br>
-    <Typewriter immediate :delay="1600" class="transition-all duration-1000" :class="{'opacity-50': $clicks >= 1 }">- Manipulating dom classes</Typewriter><br>
+    <Typewriter immediate :delay="1600" class="transition-all duration-1000" :class="{'opacity-50': $clicks >= 1 }">{{ t('js.domClasses') }}</Typewriter><br>
     <Typewriter immediate :delay="1900" class="transition-all duration-1000" >- WebAnimations API</Typewriter><br>
-    <Typewriter immediate :delay="2100" class="transition-all duration-1000" :class="{'opacity-50': [2,3,4,5].includes($clicks) }">- Third Party Libraries (e.g. Motion.dev)</Typewriter>
+    <Typewriter immediate :delay="2100" class="transition-all duration-1000" :class="{'opacity-50': [2,3,4,5].includes($clicks) }">{{ t('js.thirdParty') }}</Typewriter>
 </div>
 
 <OnEnter>

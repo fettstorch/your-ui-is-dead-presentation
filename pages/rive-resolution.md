@@ -1,12 +1,16 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
 
 <h1 v-if="$clicks >= 1" class="absolute left-1/2 -translate-x-1/2 top-60 transition-all duration-1000" :class="{
     '-translate-y-50': $clicks >= 1
-}"><Typewriter immediate>Thank you for your attention!</Typewriter></h1>
+}"><Typewriter immediate>{{ t('rive.res.h1') }}</Typewriter></h1>
 
 <BlueskyProfile v-if="$clicks >= 1" class="absolute right-10 bottom-10 anim-in-top" style="animation-delay: 2s" theme="light"/>
 
 <div v-if="$clicks >= 1" class="absolute left-50 bottom-10 w-full anim-in-left">
-    <div><Typewriter immediate> Link to this presentation:</Typewriter></div>
+    <div><Typewriter immediate>{{ t('rive.res.linkLabel') }}</Typewriter></div>
     <img class="w-80" src="/youruiisdeadonline.svg" />
 </div>
 
@@ -24,7 +28,7 @@
 
 <OnEnter>
  <div class="links anim-in-fade" v-if="$clicks >= 1">
-   <span class="links-label">a<br>d<br>d<br>i<br>t<br>i<br>o<br>n<br>a<br>l<br><br>l<br>i<br>n<br>k<br>s</span>
+   <span class="links-label"><span v-html="t('rive.res.linksLabel')" /></span>
    <div class="links-panel">
      <a href="https://cubic-bezier.com" target="_blank">cubic-bezier.com</a>
      <a href="https://prismic.io/blog/css-animation-examples" target="_blank">CSS Animation Examples</a>

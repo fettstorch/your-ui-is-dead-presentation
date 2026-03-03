@@ -1,14 +1,19 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
 <OnEnter>
     <h1 class="relative transition-all duration-1000" :class="{
       '-mt-40': $clicks >= 4
     }">
-        <Typewriter v-if="$clicks < 2" immediate :delay="1000">2. I <s>Don't</s> Have The Capabilities!</Typewriter>
+        <Typewriter v-if="$clicks < 2" immediate :delay="1000">{{ t('reasons.long2') }}</Typewriter>
         <span v-if="$clicks > 1" >2.
-        <span :class="{'bump': $clicks > 1}" style="animation-delay: 1s" >I </span>
-        <span :class="{'animated-strike': $clicks > 1}">Don't </span>
-        <span :class="{'bump': $clicks > 1}" style="animation-delay: 1.2s">Have </span>
-        <span :class="{'bump': $clicks > 1}" style="animation-delay: 1.4s">The </span>
-        <span :class="{'bump': $clicks > 1}" style="animation-delay: 1.7s">Capabilities! </span>
+        <span :class="{'bump': $clicks > 1}" style="animation-delay: 1s" >{{ t('capRes.w1') }} </span>
+        <span :class="{'animated-strike': $clicks > 1}">{{ t('capRes.w2') }} </span>
+        <span :class="{'bump': $clicks > 1}" style="animation-delay: 1.2s">{{ t('capRes.w3') }} </span>
+        <span :class="{'bump': $clicks > 1}" style="animation-delay: 1.4s">{{ t('capRes.w4') }} </span>
+        <span :class="{'bump': $clicks > 1}" style="animation-delay: 1.7s">{{ t('capRes.w5') }} </span>
         </span>
     </h1>
 </OnEnter>
@@ -34,7 +39,7 @@
 <div v-if="$clicks >= 4">
   <div class="w-full h-full absolute top-122 left-0 anim-in-bottom hover:-translate-y-100 transition-all duration-1000" style="animation-delay: 1s">
     <iframe src="https://prismic.io/blog/css-animation-examples" class="w-full h-full" />
-    <div class="speach-bubble absolute -top-15 left-1/3 anim-in-bottom">Steal like an artist 😎</div>
+    <div class="speach-bubble absolute -top-15 left-1/3 anim-in-bottom">{{ t('rive.mouse.stealBubble') }}</div>
   </div>
 </div>
 

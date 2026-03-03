@@ -1,3 +1,8 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
 <RiveMouseFollow class="w-full absolute -bottom-30 anim-in-bottom transition-all duration-1000" :hands="$clicks >= 1 && $clicks < 4"
 :class="{
     'scale-[50%] translate-y-[18%] -translate-x-20': $clicks >= 4,

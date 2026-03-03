@@ -1,5 +1,10 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
 <h1 class="-translate-y-50">
-  2. I Don't Have The Capabilities!
+  {{ t('reasons.long2') }}
 <h3 style="color: darkgray"><Typewriter immediate>Keyframes</Typewriter></h3>
 </h1>
 

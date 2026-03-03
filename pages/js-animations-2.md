@@ -1,9 +1,14 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
 <h1 class="transition-all duration-400" :class="{
     '-translate-y-50': $clicks < 4,
     '-translate-y-80': $clicks === 4
 }">
-  2. I Don't Have The Capabilities!
-<h3 style="color: darkgray">JS-animations</h3>
+  {{ t('reasons.long2') }}
+<h3 style="color: darkgray">JS-Animations</h3>
 </h1>
 
 <div class="absolute left-10 top-40 transition-all duration-400 delay-200" :class="{
@@ -11,9 +16,9 @@
     'translate-y-85 -translate-x-30': $clicks === 4,
 }">
     <span class="opacity-50">- RequestAnimationFrame</span> <br>
-    <span class="opacity-50">- Manipulating dom classes</span><br>
+    <span class="opacity-50">{{ t('js2.domClasses') }}</span><br>
     <span class="transition-all duration-1000 opacity-50">- WebAnimations API</span><br>
-    - Third Party Libraries (e.g. Motion.dev)
+    {{ t('js2.thirdParty') }}
 </div>
 
 <div

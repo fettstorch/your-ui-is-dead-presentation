@@ -1,4 +1,9 @@
-<h1 class="-translate-y-30"><Typewriter immediate :delay="1000" :speed="50" class="text-primary">1. We Don't Need This!</Typewriter></h1>
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
+<h1 class="-translate-y-30"><Typewriter immediate :delay="1000" :speed="50" class="text-primary">{{ t('reasons.h1') }}</Typewriter></h1>
 
 <img v-if="$clicks >= 1" src="/not-gonna-take-long.gif" class="w-60 absolute bottom-10 left-10 rounded-xl anim-in" />
 <img v-if="$clicks >= 4" src="/chair.png" class="w-50 bottom-4 right-15 absolute anim-in-slide-right" />

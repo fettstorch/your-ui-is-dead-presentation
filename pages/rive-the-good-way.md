@@ -1,9 +1,14 @@
-<h1 class="relative opacity-50 blur-10"> 3. I have enough on my plate right now!  </h1>
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
+<h1 class="relative opacity-50 blur-10"> {{ t('rive.good.blurredH1') }}  </h1>
 
 <!-- communication bubbles -->
 <div class="flex flex-col justify-end items-center w-80% h-fit absolute bottom-70 left-1/2 -translate-x-1/2 gap-5">
-    <div v-if="$clicks >= 2" class="speach-bubble right anim-in-bottom">I made this thing in Rive.<br>It has an input boolean and this event</div>
-    <div v-if="$clicks >= 3" class="speach-bubble anim-in-bottom">I'll wire it up in the app</div>
+    <div v-if="$clicks >= 2" class="speach-bubble right anim-in-bottom"><span v-html="t('rive.good.msg1')" /></div>
+    <div v-if="$clicks >= 3" class="speach-bubble anim-in-bottom">{{ t('rive.good.msg2') }}</div>
 </div>
 
 

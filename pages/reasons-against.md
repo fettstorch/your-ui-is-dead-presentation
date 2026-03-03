@@ -1,10 +1,15 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
 # Reasons Against Animations
 
 <div class="mt-40">
-  <div>1. <Typewriter v-if="$clicks >= 1" immediate >We don't need this!</Typewriter></div>
-  <div>2. <Typewriter v-if="$clicks >= 2" immediate >I don't have the capabilities!</Typewriter></div>
-  <div>3. <Typewriter v-if="$clicks >= 3" immediate >This would hurt performance!</Typewriter></div>
-  <div>4. <Typewriter v-if="$clicks >= 4" immediate >I have enough on my plate right now!</Typewriter></div>
+  <div>1. <Typewriter v-if="$clicks >= 1" immediate >{{ t('reasons.item1') }}</Typewriter></div>
+  <div>2. <Typewriter v-if="$clicks >= 2" immediate >{{ t('reasons.item2') }}</Typewriter></div>
+  <div>3. <Typewriter v-if="$clicks >= 3" immediate >{{ t('reasons.item3') }}</Typewriter></div>
+  <div>4. <Typewriter v-if="$clicks >= 4" immediate >{{ t('reasons.item4') }}</Typewriter></div>
 </div>
 
 <OnEnter>
