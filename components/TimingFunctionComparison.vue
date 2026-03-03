@@ -55,6 +55,7 @@ const currentLabel = computed(() => {
 <template>
   <div
     v-if="currentLabel && clicks <= 8"
+    :key="currentPath !== null ? 'synced' : 'prestart'"
     class="ball absolute left-25 bottom-15 rounded-[50%] w-20 h-20 bg-red"
   />
 
