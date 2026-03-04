@@ -23,7 +23,7 @@ const { t } = useI18n()
 <OnEnter>
     <RiveJulian class="slide-in-slowly z-1000 absolute -left-20 -bottom-45 pointer-events-none w-100 h-80" style="transform: rotate(10deg)" vibing amazed/>
     <RiveJulian model="Sven" class="slide-in-slowly z-1000 absolute -right-20 -bottom-55 pointer-events-none w-100 h-80" style="transform: scaleX(-1) rotate(10deg)" vibing happy />
-    <audio src="partyRock.mp3" autoplay />
+    <audio src="partyRock-fadein.mp3" autoplay />
 </OnEnter>
 
 <OnEnter>
