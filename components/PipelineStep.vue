@@ -102,6 +102,7 @@ const activeFillColor = computed(
 <style scoped>
 .pipeline-step {
   display: inline-block;
+  cursor: pointer;
 }
 
 .pipeline-shape {

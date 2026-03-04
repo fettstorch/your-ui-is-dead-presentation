@@ -61,7 +61,7 @@ clicks: 5
 
 ---
 layout: center
-clicks: 11
+clicks: 12
 transition: none
 src: ./pages/direction-iteration-count.md
 ---
@@ -86,7 +86,7 @@ src: ./pages/jello-demo.md
 
 ---
 layout: center
-clicks: 10
+clicks: 9
 src: ./pages/timing-functions.md
 ---
 

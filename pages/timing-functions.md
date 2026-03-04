@@ -13,4 +13,4 @@ const { t } = useI18n()
   <TimingFunctionComparison :clicks="$clicks" />
 </OnEnter>
 
-<iframe v-if="$clicks >= 10" src="https://cubic-bezier.com/#.17,.67,.83,.67" class="anim-in-bottom w-full h-[80vh] absolute top-80 hover:-translate-y-80 transition-all duration-1000"/>
+<iframe v-if="$clicks >= 9" src="https://cubic-bezier.com/#.17,.67,.83,.67" class="anim-in-bottom w-full h-[80vh] absolute top-80 hover:-translate-y-80 transition-all duration-1000"/>

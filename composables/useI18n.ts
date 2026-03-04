@@ -118,6 +118,10 @@ const translations: Record<'en' | 'de', Record<string, string>> = {
     'capRes.h1': "2. I Don't Have The Capabilities!",
     'capRes.h1Dont': "Don't",
 
+    // direction-iteration-count.md / keyframes.md subheadings
+    'cap.dirIterSub': 'CSS Animations - Direction & Iteration Count',
+    'cap.keyframesSub': 'CSS Animations - Keyframes',
+
     // rive-mouse-follow.md
     'rive.mouse.stealBubble': 'Steal like an artist 😎',
   },
@@ -237,6 +241,10 @@ const translations: Record<'en' | 'de', Record<string, string>> = {
     // capabilities-resolved.md
     'capRes.h1': '2. Ich Hab Nicht Die Fähigkeiten!',
     'capRes.h1Dont': "Don't",
+
+    // direction-iteration-count.md / keyframes.md subheadings
+    'cap.dirIterSub': 'CSS Animationen - Direction & Iteration Count',
+    'cap.keyframesSub': 'CSS Animationen - Keyframes',
 
     // rive-mouse-follow.md
     'rive.mouse.stealBubble': 'Klau wie ein Künstler 😎',

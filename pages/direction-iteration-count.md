@@ -1,60 +1,63 @@
+<script setup>
+import { useI18n } from '../composables/useI18n'
+const { t } = useI18n()
+</script>
+
 <h1 class="transition-all duration-1000" :class="{
-  '-translate-y-50': $clicks >= 1
+  '-translate-y-50': $clicks >= 2
 }">
   <Typewriter immediate >2. I Don't Have The Capabilities!</Typewriter>
-  <OnEnter :delayMs="10_000">
-    <h3 style="color: darkgray"><Typewriter immediate>Direction & Iteration Count</Typewriter></h3>
-  </OnEnter>
+  <h3 v-if="$clicks >= 1" style="color: darkgray" class="anim-in"><Typewriter immediate>{{ t('cap.dirIterSub') }}</Typewriter></h3>
 </h1>
 
 <OnEnter>
   <div class="anim-in-bottom absolute bottom-0 left-1/2 ">
-    <RiveJulian sad class="w-40 transition-all duration-8000" :walking="$clicks >= 2" :class="{
-      'translate-x-80vw': $clicks >= 2
+    <RiveJulian sad class="w-40 transition-all duration-8000" :walking="$clicks >= 3" :class="{
+      'translate-x-80vw': $clicks >= 3
     }" style="transition-timing-function: linear"/>
   </div>
 </OnEnter>
 
-<div v-if="$clicks >= 3" class="absolute left-10 bottom-80 anim-in-left" style="animation-duration: 1s" >
-  <div class="transition-all duration-1000 bs1" :class="{'box-spotlight': $clicks === 4 || $clicks === 5 }">
+<div v-if="$clicks >= 4" class="absolute left-10 bottom-80 anim-in-left" style="animation-duration: 1s" >
+  <div class="transition-all duration-1000 bs1" :class="{'box-spotlight': $clicks === 5 || $clicks === 6 }">
     <div class="anim-example-box silver-box" :class="{
-      'box-1': $clicks === 4 || $clicks === 5
+      'box-1': $clicks === 5 || $clicks === 6
       }" />
   </div>
 </div>
 
-<div v-if="$clicks >= 3" class="absolute left-10 bottom-60 anim-in-left" style="animation-duration: 1s; animation-delay: 300ms">
-  <div class="transition-all duration-1000 bs2" :class="{'box-spotlight': $clicks === 6 || $clicks === 7 }">
+<div v-if="$clicks >= 4" class="absolute left-10 bottom-60 anim-in-left" style="animation-duration: 1s; animation-delay: 300ms">
+  <div class="transition-all duration-1000 bs2" :class="{'box-spotlight': $clicks === 7 || $clicks === 8 }">
     <div class="anim-example-box bg-[#F00] text-center text-black font-bold pt-5" :class="{
-      'box-2': $clicks === 6 || $clicks === 7
+      'box-2': $clicks === 7 || $clicks === 8
     }" > X_X</div>
   </div>
 </div>
 
-<div v-if="$clicks >= 3" class="absolute left-10 bottom-40 anim-in-left" style="animation-duration: 1s; animation-delay: 600ms">
-  <div class="transition-all duration-1000 bs3" :class="{'box-spotlight': $clicks === 8 || $clicks === 9 }">
+<div v-if="$clicks >= 4" class="absolute left-10 bottom-40 anim-in-left" style="animation-duration: 1s; animation-delay: 600ms">
+  <div class="transition-all duration-1000 bs3" :class="{'box-spotlight': $clicks === 9 || $clicks === 10 }">
     <div class="anim-example-box bg-yellow text-black text-center font-bold pt-5" :class="{
-      'box-3': $clicks === 8 || $clicks === 9
+      'box-3': $clicks === 9 || $clicks === 10
     }">>o<</div>
   </div>
 </div>
 
-<div v-if="$clicks >= 3" class="absolute left-10 bottom-20 anim-in-left" style="animation-duration: 1s; animation-delay: 900ms">
-  <div class="transition-all duration-1000 bs4" :class="{'box-spotlight': $clicks === 10 || $clicks === 11 }">
+<div v-if="$clicks >= 4" class="absolute left-10 bottom-20 anim-in-left" style="animation-duration: 1s; animation-delay: 900ms">
+  <div class="transition-all duration-1000 bs4" :class="{'box-spotlight': $clicks === 11 || $clicks === 12 }">
     <div class="anim-example-box shiny-box" :class="{
-      'box-4': $clicks === 10 || $clicks === 11
+      'box-4': $clicks === 11 || $clicks === 12
     }" />
   </div>
 </div>
 
 
-<div v-if="$clicks === 4 || $clicks === 5" class="speach-bubble absolute left-60 top-45 anim-in" >Shiny 🤩</div>
-<div v-if="$clicks === 6 || $clicks === 7" class="speach-bubble absolute left-60 top-45 anim-in" >Error 🤬</div>
-<div v-if="$clicks === 8 || $clicks === 9" class="speach-bubble absolute left-50 top-25 anim-in" >Attention please 💁🏼‍♂️</div>
-<div v-if="$clicks === 10 || $clicks === 11" class="speach-bubble absolute left-60 top-45 anim-in" >Jell-O 🤤</div>
+<div v-if="$clicks === 5 || $clicks === 6" class="speach-bubble absolute left-60 top-45 anim-in" >Shiny 🤩</div>
+<div v-if="$clicks === 7 || $clicks === 8" class="speach-bubble absolute left-60 top-45 anim-in" >Error 🤬</div>
+<div v-if="$clicks === 9 || $clicks === 10" class="speach-bubble absolute left-50 top-25 anim-in" >Attention please 💁🏼‍♂️</div>
+<div v-if="$clicks === 11 || $clicks === 12" class="speach-bubble absolute left-60 top-45 anim-in" >Jell-O 🤤</div>
 
-<div v-if="$clicks >= 4" class="w-120 absolute right-10 bottom-10 anim-in-slide-right rounded-xxl" style="border: 1px solid var(--slidev-theme-primary); box-shadow: 0 0 2rem var(--slidev-theme-primary)">
-````md magic-move {at: 5, lines: true}
+<div v-if="$clicks >= 5" class="w-120 absolute right-10 bottom-10 anim-in-slide-right rounded-xxl" style="border: 1px solid var(--slidev-theme-primary); box-shadow: 0 0 2rem var(--slidev-theme-primary)">
+````md magic-move {at: 6, lines: true}
 ```css {*|3,6,10-11,16-17}
 .box-1 {
   position: relative;
@@ -78,7 +81,7 @@
 
 ```css {*|3,7-8}
 .box-2 {
-  animation: wiggle 100ms ease-in-out 
+  animation: wiggle 100ms ease-in-out
     alternate infinite;
 }
 

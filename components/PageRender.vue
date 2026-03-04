@@ -238,13 +238,13 @@ defineExpose({ addBox, removeBox, removeFirstBox, removeRandomBox, boxes });
         <!-- Controls -->
         <div class="flex gap-2 my-2">
           <button
-            class="control-btn w-8 h-8 rounded bg-white/20 hover:bg-white/30 active:scale-90 text-white font-bold text-xl flex items-center justify-center transition-all duration-150"
+            class="control-btn w-8 h-8 rounded bg-white/20 hover:bg-white/30 active:scale-90 text-white font-bold text-xl flex items-center justify-center transition-all duration-150 cursor-pointer"
             @click="removeFirstBox"
           >
             −
           </button>
           <button
-            class="control-btn w-8 h-8 rounded bg-white/20 hover:bg-white/30 active:scale-90 text-white font-bold text-xl flex items-center justify-center transition-all duration-150"
+            class="control-btn w-8 h-8 rounded bg-white/20 hover:bg-white/30 active:scale-90 text-white font-bold text-xl flex items-center justify-center transition-all duration-150 cursor-pointer"
             @click="addBox"
           >
             +

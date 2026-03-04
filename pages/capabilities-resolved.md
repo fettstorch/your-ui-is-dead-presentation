@@ -46,6 +46,8 @@ const { t } = useI18n()
 <style>
 .animated-strike {
   position: relative;
+  display: inline-block;
+  margin-right: 0.6em;
 }
 
 .moira::after {

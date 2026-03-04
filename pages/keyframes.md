@@ -5,7 +5,7 @@ const { t } = useI18n()
 
 <h1 class="-translate-y-50">
   {{ t('reasons.long2') }}
-<h3 style="color: darkgray"><Typewriter immediate>Keyframes</Typewriter></h3>
+<h3 style="color: darkgray"><Typewriter immediate>{{ t('cap.keyframesSub') }}</Typewriter></h3>
 </h1>
 
 <div class="absolute left-40 top-60 anim-in">
