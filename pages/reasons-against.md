@@ -8,8 +8,8 @@ const { t } = useI18n()
 <div class="mt-40">
   <div>1. <Typewriter v-if="$clicks >= 1" immediate >{{ t('reasons.item1') }}</Typewriter></div>
   <div>2. <Typewriter v-if="$clicks >= 2" immediate >{{ t('reasons.item2') }}</Typewriter></div>
-  <div>3. <Typewriter v-if="$clicks >= 3" immediate >{{ t('reasons.item3') }}</Typewriter></div>
-  <div>4. <Typewriter v-if="$clicks >= 4" immediate >{{ t('reasons.item4') }}</Typewriter></div>
+  <div>3. <Typewriter v-if="$clicks >= 3" immediate >{{ t('reasons.item4') }}</Typewriter></div>
+  <div>4. <Typewriter v-if="$clicks >= 4" immediate >{{ t('reasons.item3') }}</Typewriter></div>
 </div>
 
 <OnEnter>
