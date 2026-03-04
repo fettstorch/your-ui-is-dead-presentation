@@ -81,59 +81,49 @@ function toggleLeftFill() {
       Animating via transform translateX
       <label v-if="clicks >= 2" class="anim-in-top duration-input absolute right-0 text-3 italic">
         <span>Anim. Duration:</span>
-        <input
-          v-model.number="transformDurationMs"
-          type="number"
-          min="0"
-          step="100"
-          @click.stop
-        />
+        <input v-model.number="transformDurationMs" type="number" min="0" step="100" @click.stop />
         <span>ms</span>
       </label>
       <div class="pb-bg pb-transform" :class="{ 'contain-paint': clicks < 1 }">
-        <div
-          class="pb-fill pb-transform will-change-transform"
-          :ref="setPbFillRef"
-        ></div>
+        <div class="pb-fill pb-transform will-change-transform" :ref="setPbFillRef"></div>
       </div>
       <div class="pb-bg pb-transform contain-paint"">
-        <div class="pb-fill pb-transform translate-x-[-50%]!" ></div>d
-      </div>
-      <div class="pb-bg pb-transform contain-paint">
-        <div class="pb-fill pb-transform translate-x-[0%]!" ></div>
-      </div>
+        <div class=" pb-fill pb-transform translate-x-[-50%]!"></div>d
     </div>
+    <div class="pb-bg pb-transform contain-paint">
+      <div class="pb-fill pb-transform translate-x-[0%]!"></div>
+    </div>
+  </div>
 
-    <!-- progress bar - left -->
-    <div class="wrapper left-animated" :ref="setPbBgRef" @click="toggleLeftFill">
-      Animating via absolute position left
-      <div class="pb-bg pb-left" :class="{ 'overflow-hidden': clicks < 1 }">
-        <div class="pb-fill pb-left" :ref="setPbFillRef"></div>
-      </div>
-      <div class="pb-bg pb-left contain-paint">
-        <div class="pb-fill pb-left left-[-50%]!" ></div>
-      </div>
-      <div class="pb-bg pb-left contain-paint"">
-        <div class="pb-fill pb-left left-[0%]!" ></div>
-      </div>
+  <!-- progress bar - left -->
+  <div class="wrapper left-animated" :ref="setPbBgRef" @click="toggleLeftFill">
+    Animating via absolute position left
+    <div class="pb-bg pb-left" :class="{ 'overflow-hidden': clicks < 1 }">
+      <div class="pb-fill pb-left" :ref="setPbFillRef"></div>
     </div>
+    <div class="pb-bg pb-left contain-paint">
+      <div class="pb-fill pb-left left-[-50%]!"></div>
+    </div>
+    <div class="pb-bg pb-left contain-paint"">
+        <div class=" pb-fill pb-left left-[0%]!"></div>
+  </div>
+  </div>
 
-    <!-- progress bar - width -->
-    <div class="wrapper width-animated transition-all duration-1000" :ref="setPbBgRef" @click="toggleWidthFill"
-    :class="{ 'hover:gap-4!': clicks >= 2 }"
-    >
-      Animating via width
-      <div v-if="clicks >=2" class="text-3 italic opacity-50">Hover to animate gap - what is repainted?</div>
-      <div class="pb-bg pb-width" :class="{ 'contain-paint': clicks < 1 }">
-        <div class="pb-fill pb-width" :ref="setPbFillRef"></div>
-      </div>
-      <div class="pb-bg pb-width contain-paint">
-        <div class="pb-fill pb-width w-[50%]!"></div>
-      </div>
-      <div class="pb-bg pb-width contain-paint" ">
-        <div class="pb-fill pb-width w-[100%]!"></div>
-      </div>
+  <!-- progress bar - width -->
+  <div class="wrapper width-animated transition-all duration-1000" :ref="setPbBgRef" @click="toggleWidthFill"
+    :class="{ 'hover:gap-4!': clicks >= 2 }">
+    Animating via width
+    <div v-if="clicks >= 2" class="text-3 italic opacity-50">Hover to animate gap - what is repainted?</div>
+    <div class="pb-bg pb-width" :class="{ 'contain-paint': clicks < 1 }">
+      <div class="pb-fill pb-width" :ref="setPbFillRef"></div>
     </div>
+    <div class="pb-bg pb-width contain-paint">
+      <div class="pb-fill pb-width w-[50%]!"></div>
+    </div>
+    <div class="pb-bg pb-width contain-paint" ">
+        <div class=" pb-fill pb-width w-[100%]!"></div>
+  </div>
+  </div>
   </div>
 
   <div class="wrapper info-stuff absolute bottom-5 -right-35 text-2 italic">

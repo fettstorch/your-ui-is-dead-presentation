@@ -7,7 +7,7 @@ const { t } = useI18n()
     '-translate-y-50': $clicks >= 1
 }"><Typewriter immediate>{{ t('rive.res.h1') }}</Typewriter></h1>
 
-<BlueskyProfile v-if="$clicks >= 1" class="absolute right-10 bottom-10 anim-in-top" style="animation-delay: 2s" theme="light"/>
+<BlueskyProfile v-if="$clicks >= 1" class="absolute right-10 bottom-10 anim-in-top" style="animation-delay: 2s" theme="light" />
 
 <div v-if="$clicks >= 1" class="absolute left-50 bottom-10 w-full anim-in-left">
     <div><Typewriter immediate>{{ t('rive.res.linkLabel') }}</Typewriter></div>
@@ -16,8 +16,8 @@ const { t } = useI18n()
 
 <div class="anim-in-fade">
     <div class="disco-overlay absolute inset-0 z-9999 pointer-events-none" />
-    <div class="disco-light disco-light-left absolute -top-40 -left-40 w-100 h-80 rounded-full pointer-events-none opacity-20" />
-    <div class="disco-light disco-light-right absolute -top-40 -right-40 w-80 h-80 rounded-full pointer-events-none opacity-20" />
+    <div class="disco-light disco-light-left absolute -top-40 -left-40 w-100 h-80 rounded-full pointer-events-none opacity-100" />
+    <div class="disco-light disco-light-right absolute -top-40 -right-40 w-80 h-80 rounded-full pointer-events-none opacity-100" />
 </div>
 
 <OnEnter>
@@ -65,6 +65,7 @@ const { t } = useI18n()
 }
 @keyframes spinLight {
   from { transform: rotate(0deg); }
+  50% { transform: rotate(180deg) scale(1.3)}
   to { transform: rotate(360deg); }
 }
 .disco-light {
