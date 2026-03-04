@@ -43,6 +43,14 @@ const { t } = useI18n()
   'anim-in-bottom': $clicks > 0
 }" style="animation-duration: 250ms"/>
 
+<!--
+- schwer so einem talk zu folgen
+- aber genau das war der Plan!
+- Svens Talk war so gut
+- wir wollten noch eine Dev Perspektive darauf
+-->
+
+
 ---
 clicks: 4
 src: ./pages/reasons-against.md

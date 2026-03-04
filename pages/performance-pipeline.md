@@ -73,7 +73,7 @@ const { t } = useI18n()
     <img class="relative -scale-x-[100%] w-14" src="https://media0.giphy.com/media/WSxuismGwJHM8CAvBW/giphy.gif?cid=5a38a5a2so7n3ok6y3mktqi2yf4qv6jrkfofhbqmlgq8q6ug" />
 </div>
 
-<div v-if="$clicks >= 15" class="anim-in-fade absolute flex flex-col top-26 left-11 w-60 pointer-events-none">
+<div v-if="$clicks >= 15" class="anim-in-fade absolute flex flex-col top-30 left-11 w-60 pointer-events-none">
     <span class="ml-2 text-2 italic translate-y-6"><span v-html="t('perf.pipe.hintMargins')" /></span>
     <img class="relative translate-y-6 rotate-[90deg] -scale-x-[100%] w-11" src="https://media0.giphy.com/media/WSxuismGwJHM8CAvBW/giphy.gif?cid=5a38a5a2so7n3ok6y3mktqi2yf4qv6jrkfofhbqmlgq8q6ug" />
 </div>

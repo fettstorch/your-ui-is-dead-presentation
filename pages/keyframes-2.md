@@ -157,3 +157,9 @@ box-shadow: inset 1px 1px 5px white;
   }
 }
 </style>
+
+<!--
+### Exit:
+- kraft rausnehmen? -> keyframes
+- Animationsgeschwindigkeit verlangsamen? -> timing functions
+-->

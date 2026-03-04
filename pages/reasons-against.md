@@ -25,3 +25,6 @@ const { t } = useI18n()
     transform: `rotateZ(${Math.pow(-1, $clicks) * ($clicks) * 10}deg) scale(calc(1.${$clicks} + ${$clicks * $clicks * 0.041}))`
   }" :angry="$clicks >= 1" :angryWaving="$clicks >= 3" />
 </OnEnter>
+
+<!--
+-->

@@ -223,3 +223,7 @@ const { t } = useI18n()
     87.5% { transform: skewX(-1deg) skewY(-1deg); }
   }
 </style>
+
+<!--
+- quick!
+-->

@@ -12,7 +12,7 @@ const { t } = useI18n()
 </h1>
 
 <OnEnter>
-<div class="absolute left-10 top-50">
+<div class="absolute left-10 top-50 text-4">
     <div><Typewriter v-if="$clicks >= 2" immediate>{{ t('rive.perf.loadingtimes') }}</Typewriter></div>
     <div><Typewriter v-if="$clicks >= 3" immediate>{{ t('rive.perf.loadingtimesDetail') }}</Typewriter></div>
     <div><Typewriter v-if="$clicks >= 4" immediate>{{ t('rive.perf.execution') }}</Typewriter></div>

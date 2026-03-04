@@ -64,3 +64,8 @@
   85.714%  { transform: skewY(-2deg) skewX(-2deg); }
 }
 </style>
+
+<!--
+Ob wir eine webpage voll interaktiver Götterspeisen haben wollen? idk
+ABER wir können es - easy!
+-->

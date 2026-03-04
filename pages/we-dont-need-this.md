@@ -18,3 +18,7 @@ const { t } = useI18n()
     <img v-if="$clicks >= 6" src="/pm-cap.png" class="w-34 absolute left-46 top-10 rotate-16 anim-in-top" />
   </div>
 </OnEnter>
+
+<!--
+- quick!
+-->
