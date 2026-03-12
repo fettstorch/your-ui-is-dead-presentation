@@ -12,13 +12,13 @@ titleTemplate: "%s"
 info: |
   Your UI Is Dead - a talk about web animations and how we can stop discouraging our designers from doing them
 seoMeta:
-  ogTitle: "Your UI Is Dead — Bringing Web Animations to Life with Rive"
-  ogDescription: "Your designers hear 'reasons against using animations'. Lets have a look at some of those reasons and why they shouldn't be."
+  ogTitle: "Your UI Is Dead — The Dev Perspective"
+  ogDescription: "Your designers hear 'reasons against using animations'. Lets have a look at some of those reasons and why they're just holding you back."
   ogImage: https://your-ui-is-dead-dev.vercel.app/YourUiIsDeadPreview.png
   ogType: website
   twitterCard: summary_large_image
   twitterTitle: "Your UI Is Dead — The Dev Perspective"
-  twitterDescription: "Your designers hear 'reasons against using animations'. Lets have a look at some of those reasons and why they shouldn't be."
+  twitterDescription: "Your designers hear 'reasons against using animations'. Lets have a look at some of those reasons and why they're just holding you back."
   twitterImage: https://your-ui-is-dead-dev.vercel.app/YourUiIsDeadPreview.png
 # apply UnoCSS classes to the current slide
 class: text-center
