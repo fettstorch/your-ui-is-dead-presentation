@@ -4,7 +4,7 @@ const translations: Record<'en' | 'de', Record<string, string>> = {
   en: {
     // slides.md - title slide
     'title.heading': 'Your UI Is Dead',
-    'title.subtitle': 'From devs for devs',
+    'title.subtitle': 'The Dev Perspective',
 
     // reasons-against.md - list items
     'reasons.item1': "We Don't Need This!",
@@ -130,7 +130,7 @@ const translations: Record<'en' | 'de', Record<string, string>> = {
   de: {
     // slides.md - title slide
     'title.heading': 'Deine UI ist tot',
-    'title.subtitle': 'Von Devs für Devs',
+    'title.subtitle': 'Die Entwicklerperspektive',
 
     // reasons-against.md - list items
     'reasons.item1': 'Das Brauchen Wir Nicht!',

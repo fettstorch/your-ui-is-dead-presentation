@@ -8,6 +8,21 @@ themeConfig:
 # background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
 title: Your UI Is Dead
+info: |
+  Your UI Is Dead - a talk about web animations and how we can stop discouraging our designers from doing them
+headmeta:
+  - property: og:title
+    content: Your UI Is Dead
+  - property: og:description
+    content: A talk about web animations and how we can stop discouraging our designers from doing them
+  - property: og:image
+    content: https://your-ui-is-dead-dev.vercel.app/YourUiIsDeadPreview.png
+  - property: og:type
+    content: website
+  - name: twitter:card
+    content: summary_large_image
+  - name: twitter:image
+    content: https://your-ui-is-dead-dev.vercel.app/YourUiIsDeadPreview.png
 # apply UnoCSS classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
