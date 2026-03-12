@@ -1,6 +1,9 @@
 <script setup>
 import { useI18n } from '../composables/useI18n'
+import { useTarget } from '../composables/useTarget'
 const { t } = useI18n()
+
+const { isWeb } = useTarget()
 </script>
 
 <div class="absolute left-30 top-1/2 transition-all duration-1000" :class="{
@@ -78,6 +81,14 @@ const { t } = useI18n()
     <img class="relative translate-y-6 rotate-[90deg] -scale-x-[100%] w-11" src="https://media0.giphy.com/media/WSxuismGwJHM8CAvBW/giphy.gif?cid=5a38a5a2so7n3ok6y3mktqi2yf4qv6jrkfofhbqmlgq8q6ug" />
 </div>
 
+<!-- Info-box web only -->
+<div v-if="$clicks >= 15 && isWeb" class="info-box transition-all duration-600 absolute left-1/2 -translate-x-[50%] -bottom-1 translate-y-[90%] bg-gray-900 rounded-xl px-6 py-3 hover:translate-y-0!" style="border: 0.2rem solid var(--slidev-theme-primary)" >
+Mind that this is but a very simplified mental model of the actual process of the causalities in the render pipeline. In reality e.g.:<br>
+<details class="pipe-detail text-sm my-1"><summary class="cursor-pointer">even when using...</summary>even when using a predefined hover class the restyle step will in fact happen as the browser needs to redetermine what rules should apply now to a certain element.</details>
+<details class="pipe-detail text-sm my-1"><summary class="cursor-pointer">even removing an...</summary>even removing an element would actually trigger the restyle occasionally for example due to an nth-element rule.</details>
+But also sometimes certain restyles/reflows need only happen once before the animation, then all following keyframes can require only e.g. repaint -> composite.
+<div class="absolute w-10 h-10 flex flex-row justify-center items-center -top-5 -right-5 rounded-[50%] bg-gray-900 italic font-bold" style="border: 0.2rem solid var(--slidev-theme-primary); color: var(--slidev-theme-primary)">i</div>
+</div>
 
 <style>
     .ex-block {
@@ -101,9 +112,44 @@ const { t } = useI18n()
         color: white;
     }
 
+    .pipe-detail summary {
+        list-style: none;
+    }
+    .pipe-detail summary::marker,
+    .pipe-detail summary::-webkit-details-marker {
+        display: none;
+    }
+    .pipe-detail summary::before {
+        content: '▶';
+        display: inline-block;
+        font-size: 1.1em;
+        margin-right: 0.4em;
+        color: var(--slidev-theme-primary);
+        transition: transform 0.2s;
+    }
+    .pipe-detail[open] summary::before {
+        transform: rotate(90deg);
+    }
+    .pipe-detail[open] summary {
+        font-size: 0;
+    }
+    .pipe-detail[open] summary::before {
+        font-size: 1.1rem;
+    }
+
     .patrick {
         mask-image: radial-gradient(70% 70% at center, black, transparent 70%);
         filter: brightness(120%);
+    }
+
+    .info-box:not(:hover) {
+        animation: attentionjump 1s alternate infinite ease;
+    }
+
+    @keyframes attentionjump {
+        0% { translate: 0 0; }
+        25% { translate: 0 -10%; }
+        50% { translate: 0 0; }
     }
 </style>
 
