@@ -224,6 +224,8 @@ const { t } = useI18n()
   }
 </style>
 
+<ClickCounter />
+
 <!--
 - quick!
 -->

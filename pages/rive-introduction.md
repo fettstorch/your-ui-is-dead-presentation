@@ -17,3 +17,5 @@ const { t } = useI18n()
     <RiveJulian class="w-50 absolute bottom-0 -left-110 transition-all duration-8000 linear" happy walking :jump="$clicks >= 5" :class="{'translate-x-380': $clicks >= 4 }"/>
     <RiveJulian class="w-50 absolute bottom-0 -left-50  transition-all duration-8000 linear" :model="'Sven'" happy walking :class="{'translate-x-380': $clicks >= 4 }"/>
 </OnEnter>
+
+<ClickCounter />

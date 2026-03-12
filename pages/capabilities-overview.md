@@ -43,5 +43,7 @@ const { t } = useI18n()
 <AnimatedArrow v-if="$clicks >= 6" :config="{ start: [0.48, 0.2], end: [0.76, 0.65], controlPoints: [[0.6, 0.7]], strokeWidth: 4, color: 'white' }" />
 <AnimatedArrow v-if="$clicks >= 6" :config="{ start: [0.8, 0.2], end: [0.80, 0.6], strokeWidth: 4, color: 'white' }" />
 
+<ClickCounter />
+
 <!--
 -->

@@ -22,3 +22,5 @@ const { t } = useI18n()
         '-translate-y-100 rotate-z-30 translate-x-40': $clicks === 1,
         }" />
 </OnEnter>
+
+<ClickCounter />

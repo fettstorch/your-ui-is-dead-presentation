@@ -124,3 +124,5 @@ animate(0, 1, {
 <OnEnter>
     <MotionDev class="absolute left-10 bottom-10" :clicks="$clicks" />
 </OnEnter>
+
+<ClickCounter />

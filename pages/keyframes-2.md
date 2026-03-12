@@ -158,6 +158,8 @@ box-shadow: inset 1px 1px 5px white;
 }
 </style>
 
+<ClickCounter />
+
 <!--
 ### Exit:
 - kraft rausnehmen? -> keyframes

@@ -23,3 +23,5 @@ const { t } = useI18n()
 <img v-if="$clicks >= 6" class="anim-in-left w-30 absolute left-10 bottom-10" src="https://media1.giphy.com/media/9KawrQzIwdAYg/giphy.gif?cid=5a38a5a20k568ekjsqgzyabdbtgdw32c838yzm0yt1o46cod" />
 
 </OnEnter>
+
+<ClickCounter />

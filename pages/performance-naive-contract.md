@@ -41,3 +41,5 @@ const { t } = useI18n()
       :class="{'translate-y-20 translate-x-40 scale-[150%] rotate-z-[45deg]': $clicks >= 7 }"
     :thumbsUp="$clicks >= 7" :happy="$clicks === 7" :unsure="$clicks >= 8" :model="'Sven'" />
 </OnEnter>
+
+<ClickCounter />

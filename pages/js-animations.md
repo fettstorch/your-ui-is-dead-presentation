@@ -85,3 +85,5 @@ el.animate(
 ```
 ````
 </div>
+
+<ClickCounter />

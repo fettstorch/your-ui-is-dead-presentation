@@ -11,3 +11,5 @@ const { t } = useI18n()
 </div>
 
 <h1 v-if="$clicks >= 2" class="anim-in-fade transition-all duration-1000" :class="{'-translate-y-50': $clicks >= 3}"><Typewriter immediate :delay="1000">{{ t('perf.overview.h1') }}</Typewriter></h1>
+
+<ClickCounter />

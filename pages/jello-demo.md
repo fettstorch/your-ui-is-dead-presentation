@@ -65,6 +65,8 @@
 }
 </style>
 
+<ClickCounter />
+
 <!--
 Ob wir eine webpage voll interaktiver Götterspeisen haben wollen? idk
 ABER wir können es - easy!

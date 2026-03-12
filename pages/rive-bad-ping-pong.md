@@ -59,3 +59,5 @@ const { t } = useI18n()
         margin-left: 20rem;
     }
 </style>
+
+<ClickCounter />

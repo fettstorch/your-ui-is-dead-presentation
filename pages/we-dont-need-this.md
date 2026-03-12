@@ -1,6 +1,9 @@
 <script setup>
 import { useI18n } from '../composables/useI18n'
+import { useTarget } from '../composables/useTarget'
 const { t } = useI18n()
+
+const { isWeb } = useTarget()
 </script>
 
 <h1 class="-translate-y-30"><Typewriter immediate :delay="1000" :speed="50" class="text-primary">{{ t('reasons.h1') }}</Typewriter></h1>
@@ -12,12 +15,15 @@ const { t } = useI18n()
 <OnEnter>
   <div class="absolute bottom-0 transition-all duration-5000" :class="{
     '-right-100': $clicks <= 1,
-    'right-30': $clicks >= 2
+    'right-30': $clicks >= 2,
+    'transition-none duration-0!': $clicks >= 3 && isWeb
   }">
     <RiveJulian class="w-80 -scale-x-100" :angry="$clicks < 5" :walking="$clicks < 3" :angryWaving="$clicks < 5" :sitting="$clicks >= 5" :unsure="$clicks >= 5"/>
     <img v-if="$clicks >= 6" src="/pm-cap.png" class="w-34 absolute left-46 top-10 rotate-16 anim-in-top" />
   </div>
 </OnEnter>
+
+<ClickCounter />
 
 <!--
 - quick!

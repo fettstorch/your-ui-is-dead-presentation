@@ -26,5 +26,7 @@ const { t } = useI18n()
   }" :angry="$clicks >= 1" :angryWaving="$clicks >= 3" />
 </OnEnter>
 
+<ClickCounter />
+
 <!--
 -->

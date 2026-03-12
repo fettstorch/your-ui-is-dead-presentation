@@ -4,3 +4,5 @@
     <img v-if="$clicks >= 3" src="/browser.png" class="absolute bottom-50 left-25 w-20 anim-in-bottom" />
     <div v-if="$clicks >= 4" class="absolute left-46 bottom-6 anim-in-bottom font-bold" style="text-shadow: 0px 0px 5px black; color: var(--slidev-theme-primary)">Complexity</div>
 </OnEnter>
+
+<ClickCounter />

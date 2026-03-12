@@ -109,3 +109,5 @@ r.on(EventType.RiveEvent, (event) => {
 ````
 </div>
 </OnEnter>
+
+<ClickCounter />

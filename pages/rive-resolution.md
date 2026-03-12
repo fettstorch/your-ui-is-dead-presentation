@@ -146,3 +146,5 @@ const { t } = useI18n()
   text-decoration: underline;
 }
 </style>
+
+<ClickCounter />

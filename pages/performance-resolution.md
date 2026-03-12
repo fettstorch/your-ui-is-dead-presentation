@@ -29,3 +29,5 @@ const { t } = useI18n()
 <img src="/unicorn.gif" class="absolute -left-120 w-120 bottom-10 transition-all duration-4000" :class="{
     'translate-x-[180vw]': $clicks > 7
 }" />
+
+<ClickCounter />

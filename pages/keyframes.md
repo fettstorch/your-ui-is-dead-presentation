@@ -97,3 +97,5 @@ background: conic-gradient(
 box-shadow: inset 1px 1px 5px white;
 }
 </style>
+
+<ClickCounter />

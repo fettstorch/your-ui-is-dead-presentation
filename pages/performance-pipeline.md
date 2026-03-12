@@ -106,3 +106,5 @@ const { t } = useI18n()
         filter: brightness(120%);
     }
 </style>
+
+<ClickCounter />
