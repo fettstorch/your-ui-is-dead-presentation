@@ -13,6 +13,7 @@
     "@slidev/cli": "^52.11.4",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
+    "@vercel/analytics": "^2.0.0",
     "@vueuse/core": "^14.1.0",
     "motion": "^12.33.0",
     "three": "^0.182.0",
