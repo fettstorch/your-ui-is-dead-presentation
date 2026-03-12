@@ -124,6 +124,8 @@ const translations: Record<'en' | 'de', Record<string, string>> = {
 
     // rive-mouse-follow.md
     'rive.mouse.stealBubble': 'Steal like an artist 😎',
+    'rive.mouse.clickMe': 'click me!',
+    'rive.mouse.clickMeAgain': 'NOW click me again!',
   },
   de: {
     // slides.md - title slide
@@ -248,6 +250,8 @@ const translations: Record<'en' | 'de', Record<string, string>> = {
 
     // rive-mouse-follow.md
     'rive.mouse.stealBubble': 'Klau wie ein Künstler 😎',
+    'rive.mouse.clickMe': 'klick mich!',
+    'rive.mouse.clickMeAgain': 'JETZT nochmal klicken!',
   },
 }
 
